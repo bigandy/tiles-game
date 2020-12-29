@@ -1,0 +1,47 @@
+body {
+	padding: 3em;
+}
+
+.grid {
+	width: 500px;
+	height: 500px;
+
+	max-width: calc(100vw - 6em);
+
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	grid-template-rows: repeat(var(--rows), 1fr);
+
+	place-items: center;
+	grid-gap: 1em;
+}
+
+.cell {
+	height: 100%;
+	background: green;
+	display: grid;
+	place-content: center;
+	width: 100%;
+
+	border: 5px solid orange;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&--active {
+		background: lightgreen;
+	}
+
+	&--last-column {
+		border-color: pink;
+	}
+
+	&--middle-column {
+		border-color: red;
+	}
+
+	&--first-column {
+		border-color: yellow;
+	}
+}
